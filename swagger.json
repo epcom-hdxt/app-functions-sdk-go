@@ -10,14 +10,14 @@
   ],
   "swagger": "2.0",
   "info": {
-    "description": "Welcome the App Functions SDK for EdgeX. This sdk is meant to provide all the plumbing necessary for developers to get started\nin processing/transforming/exporting data out of EdgeX. For full documentation on this SDK please visit https://github.com/edgexfoundry/app-functions-sdk-go/blob/master/README.md\n\nThis Swagger Document focuses on the few restful APIs provided with the SDK, however the complete documentation for all available features can be found\nhere https://github.com/edgexfoundry/app-functions-sdk-go/blob/master/README.md .",
+    "description": "Welcome the App Functions SDK for EdgeX. This sdk is meant to provide all the plumbing necessary for developers to get started\nin processing/transforming/exporting data out of EdgeX. For full documentation on this SDK please visit https://github.com/epcom-hdxt/app-functions-sdk-go/blob/master/README.md\n\nThis Swagger Document focuses on the few restful APIs provided with the SDK, however the complete documentation for all available features can be found\nhere https://github.com/epcom-hdxt/app-functions-sdk-go/blob/master/README.md .",
     "title": "App Functions SDK API.",
     "contact": {
       "url": "https://edgex.discourse.group/c/applications"
     },
     "license": {
       "name": "Apache-2.0",
-      "url": "https://github.com/edgexfoundry/app-functions-sdk-go/blob/master/LICENSE"
+      "url": "https://github.com/epcom-hdxt/app-functions-sdk-go/blob/master/LICENSE"
     },
     "version": "1.0.0"
   },
@@ -112,7 +112,7 @@
         "operationId": "Trigger",
         "parameters": [
           {
-            "description": "This is the data that will processed the configured pipeline. Typically this is an EdgeX event as described below, however, it can\ningest other forms of data if a custom Target Type (https://github.com/edgexfoundry/app-functions-sdk-go/blob/master/README.md#target-type) is being used.\n",
+            "description": "This is the data that will processed the configured pipeline. Typically this is an EdgeX event as described below, however, it can\ningest other forms of data if a custom Target Type (https://github.com/epcom-hdxt/app-functions-sdk-go/blob/master/README.md#target-type) is being used.\n",
             "name": "Data Event",
             "in": "body",
             "required": true,
@@ -247,7 +247,7 @@
           "example": "messagebus"
         }
       },
-      "x-go-package": "github.com/edgexfoundry/app-functions-sdk-go/internal/common"
+      "x-go-package": "github.com/epcom-hdxt/app-functions-sdk-go/internal/common"
     },
     "ClientInfo": {
       "type": "object",
@@ -267,7 +267,7 @@
           "type": "string"
         }
       },
-      "x-go-package": "github.com/edgexfoundry/app-functions-sdk-go/internal/common"
+      "x-go-package": "github.com/epcom-hdxt/app-functions-sdk-go/internal/common"
     },
     "ConfigurationStruct": {
       "description": "ConfigurationStruct",
@@ -309,7 +309,7 @@
           "$ref": "#/definitions/WritableInfo"
         }
       },
-      "x-go-package": "github.com/edgexfoundry/app-functions-sdk-go/internal/common"
+      "x-go-package": "github.com/epcom-hdxt/app-functions-sdk-go/internal/common"
     },
     "DatabaseInfo": {
       "type": "object",
@@ -343,7 +343,7 @@
           "type": "string"
         }
       },
-      "x-go-package": "github.com/edgexfoundry/app-functions-sdk-go/internal/store/db"
+      "x-go-package": "github.com/epcom-hdxt/app-functions-sdk-go/internal/store/db"
     },
     "Event": {
       "description": "Event represents a single measurable event read from a device",
@@ -419,7 +419,7 @@
           "type": "string"
         }
       },
-      "x-go-package": "github.com/edgexfoundry/app-functions-sdk-go/internal/common"
+      "x-go-package": "github.com/epcom-hdxt/app-functions-sdk-go/internal/common"
     },
     "MessageBusConfig": {
       "description": "MessageBusConfig defines the messaging information need to connect to the message bus\nin a publish-subscribe pattern",
@@ -459,7 +459,7 @@
           }
         }
       },
-      "x-go-package": "github.com/edgexfoundry/app-functions-sdk-go/internal/common"
+      "x-go-package": "github.com/epcom-hdxt/app-functions-sdk-go/internal/common"
     },
     "PipelineInfo": {
       "type": "object",
@@ -477,7 +477,7 @@
           "type": "boolean"
         }
       },
-      "x-go-package": "github.com/edgexfoundry/app-functions-sdk-go/internal/common"
+      "x-go-package": "github.com/epcom-hdxt/app-functions-sdk-go/internal/common"
     },
     "Reading": {
       "type": "object",
@@ -544,7 +544,7 @@
           "type": "string"
         }
       },
-      "x-go-package": "github.com/edgexfoundry/app-functions-sdk-go/internal/common"
+      "x-go-package": "github.com/epcom-hdxt/app-functions-sdk-go/internal/common"
     },
     "ServiceInfo": {
       "description": "ServiceInfo is used to hold and configure various settings related to the hosting of this service",
@@ -580,7 +580,7 @@
           "type": "string"
         }
       },
-      "x-go-package": "github.com/edgexfoundry/app-functions-sdk-go/internal/common"
+      "x-go-package": "github.com/epcom-hdxt/app-functions-sdk-go/internal/common"
     },
     "StoreAndForwardInfo": {
       "type": "object",
@@ -596,7 +596,7 @@
           "type": "string"
         }
       },
-      "x-go-package": "github.com/edgexfoundry/app-functions-sdk-go/internal/common"
+      "x-go-package": "github.com/epcom-hdxt/app-functions-sdk-go/internal/common"
     },
     "SystemUsage": {
       "description": "SystemUsage",
@@ -610,7 +610,7 @@
           "$ref": "#/definitions/memoryUsage"
         }
       },
-      "x-go-package": "github.com/edgexfoundry/app-functions-sdk-go/internal/telemetry"
+      "x-go-package": "github.com/epcom-hdxt/app-functions-sdk-go/internal/telemetry"
     },
     "Version": {
       "type": "object",
@@ -624,7 +624,7 @@
           "x-go-name": "Version"
         }
       },
-      "x-go-package": "github.com/edgexfoundry/app-functions-sdk-go/internal/webserver"
+      "x-go-package": "github.com/epcom-hdxt/app-functions-sdk-go/internal/webserver"
     },
     "WritableInfo": {
       "type": "object",
@@ -652,7 +652,7 @@
           "$ref": "#/definitions/StoreAndForwardInfo"
         }
       },
-      "x-go-package": "github.com/edgexfoundry/app-functions-sdk-go/internal/common"
+      "x-go-package": "github.com/epcom-hdxt/app-functions-sdk-go/internal/common"
     },
     "memoryUsage": {
       "type": "object",
@@ -682,7 +682,7 @@
           "format": "uint64"
         }
       },
-      "x-go-package": "github.com/edgexfoundry/app-functions-sdk-go/internal/telemetry"
+      "x-go-package": "github.com/epcom-hdxt/app-functions-sdk-go/internal/telemetry"
     }
   }
 }

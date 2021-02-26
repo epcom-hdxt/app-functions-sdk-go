@@ -22,15 +22,15 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/edgexfoundry/app-functions-sdk-go/internal/common"
-	"github.com/edgexfoundry/app-functions-sdk-go/internal/security"
-	"github.com/edgexfoundry/app-functions-sdk-go/pkg/util"
 	"github.com/edgexfoundry/go-mod-core-contracts/clients"
 	"github.com/edgexfoundry/go-mod-core-contracts/clients/command"
 	"github.com/edgexfoundry/go-mod-core-contracts/clients/coredata"
 	"github.com/edgexfoundry/go-mod-core-contracts/clients/logger"
 	"github.com/edgexfoundry/go-mod-core-contracts/clients/notifications"
 	"github.com/edgexfoundry/go-mod-core-contracts/models"
+	"github.com/epcom-hdxt/app-functions-sdk-go/internal/common"
+	"github.com/epcom-hdxt/app-functions-sdk-go/internal/security"
+	"github.com/epcom-hdxt/app-functions-sdk-go/pkg/util"
 	"github.com/google/uuid"
 )
 

@@ -23,8 +23,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/edgexfoundry/app-functions-sdk-go/internal/common"
-	"github.com/edgexfoundry/app-functions-sdk-go/internal/store/db"
+	"github.com/epcom-hdxt/app-functions-sdk-go/internal/common"
+	"github.com/epcom-hdxt/app-functions-sdk-go/internal/store/db"
 )
 
 type SecretProviderMock struct {

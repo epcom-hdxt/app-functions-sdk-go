@@ -28,7 +28,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/edgexfoundry/app-functions-sdk-go/internal/security"
+	"github.com/epcom-hdxt/app-functions-sdk-go/internal/security"
 )
 
 const testCACert = `-----BEGIN CERTIFICATE-----

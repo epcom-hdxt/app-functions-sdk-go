@@ -29,10 +29,10 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/edgexfoundry/app-functions-sdk-go/internal"
-	"github.com/edgexfoundry/app-functions-sdk-go/internal/common"
-	"github.com/edgexfoundry/app-functions-sdk-go/internal/security"
-	"github.com/edgexfoundry/app-functions-sdk-go/internal/telemetry"
+	"github.com/epcom-hdxt/app-functions-sdk-go/internal"
+	"github.com/epcom-hdxt/app-functions-sdk-go/internal/common"
+	"github.com/epcom-hdxt/app-functions-sdk-go/internal/security"
+	"github.com/epcom-hdxt/app-functions-sdk-go/internal/telemetry"
 )
 
 var logClient logger.LoggingClient

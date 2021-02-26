@@ -26,7 +26,7 @@ import (
 	"testing"
 
 	MQTT "github.com/eclipse/paho.mqtt.golang"
-	"github.com/edgexfoundry/app-functions-sdk-go/internal/security"
+	"github.com/epcom-hdxt/app-functions-sdk-go/internal/security"
 )
 
 func TestMQTTSendWithData(t *testing.T) {

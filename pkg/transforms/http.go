@@ -23,10 +23,10 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/edgexfoundry/app-functions-sdk-go/pkg/util"
+	"github.com/epcom-hdxt/app-functions-sdk-go/pkg/util"
 
-	"github.com/edgexfoundry/app-functions-sdk-go/appcontext"
 	"github.com/edgexfoundry/go-mod-core-contracts/clients"
+	"github.com/epcom-hdxt/app-functions-sdk-go/appcontext"
 )
 
 // HTTPSender ...

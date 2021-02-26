@@ -19,7 +19,7 @@ package mocks
 import (
 	"testing"
 
-	. "github.com/edgexfoundry/app-functions-sdk-go/internal/security/authtokenloader"
+	. "github.com/epcom-hdxt/app-functions-sdk-go/internal/security/authtokenloader"
 	"github.com/stretchr/testify/assert"
 )
 

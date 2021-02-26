@@ -2,7 +2,7 @@
 
 package mocks
 
-import contracts "github.com/edgexfoundry/app-functions-sdk-go/internal/store/contracts"
+import contracts "github.com/epcom-hdxt/app-functions-sdk-go/internal/store/contracts"
 
 import mock "github.com/stretchr/testify/mock"
 

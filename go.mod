@@ -1,4 +1,4 @@
-module github.com/edgexfoundry/app-functions-sdk-go
+module github.com/epcom-hdxt/app-functions-sdk-go
 
 go 1.15
 
