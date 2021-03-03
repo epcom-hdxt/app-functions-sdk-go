@@ -23,12 +23,13 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/edgexfoundry/go-mod-core-contracts/clients"
-	"github.com/edgexfoundry/go-mod-core-contracts/models"
-	"github.com/epcom-hdxt/app-functions-sdk-go/appcontext"
 	"math"
 	"strconv"
 	"strings"
+
+	"github.com/edgexfoundry/go-mod-core-contracts/clients"
+	"github.com/edgexfoundry/go-mod-core-contracts/models"
+	"github.com/epcom-hdxt/app-functions-sdk-go/appcontext"
 )
 
 // Conversion houses various built in conversion transforms (XML, JSON, CSV)
@@ -140,7 +141,7 @@ func (f Conversion) CustomTransformToXML(edgexcontext *appcontext.Context, param
 		build.WriteString(",\"device\":\"" + result.Device + "\",\"created\":\"" + strconv.FormatInt(result.Created, 10) + "\",\"origin\":\"" + strconv.FormatInt(result.Origin, 10) + "\",\"dtype\":\"" + dtype + "\"}")
 
 		edgexcontext.ResponseContentType = clients.ContentTypeJSON
-
+		fmt.Println("111")
 		return true, build.String()
 	}
 	return false, errors.New("Unexpected type received")
