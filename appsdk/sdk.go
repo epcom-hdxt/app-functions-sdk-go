@@ -97,6 +97,7 @@ const SDKKey key = 0
 type AppFunctionsSDK struct {
 	// ServiceKey is the application services's key used for Configuration and Registration when the Registry is enabled
 	ServiceKey string
+	Hahahaha   string
 	// LoggingClient is the EdgeX logger client used to log messages
 	LoggingClient logger.LoggingClient
 	// TargetType is the expected type of the incoming data. Must be set to a pointer to an instance of the type.
