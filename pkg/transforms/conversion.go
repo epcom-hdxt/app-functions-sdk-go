@@ -91,10 +91,10 @@ func (f Conversion) CustomTransformToXML(edgexcontext *appcontext.Context, param
 		readings := result.Readings
 
 		var build strings.Builder
-		build.WriteString("{\"data\":[{")
+		build.WriteString("[{\"data\":[{")
 		var dtype = "value"
 		// var shiftFlagStr = ""
-		//from db
+		//Todo from db
 		shiftflag := []string{"w1", "w2", "w3", "f1", "f2", "p1", "p2", "p3", "rs"}
 		shiftFlagStr := strings.Join(shiftflag, ",")
 		flagmap := CreateShiftFlagMap(shiftflag)
@@ -113,11 +113,11 @@ func (f Conversion) CustomTransformToXML(edgexcontext *appcontext.Context, param
 					} else {
 						return false, errors.New("Unexpected type received")
 					}
-					if k < 15 {
-						build.WriteString(",")
-					}
+					// if k < 15 {
+					build.WriteString(",")
+					// }
 				}
-				build.WriteString("}]")
+				build.WriteString("\"value\":\"" + item.Value + "\"}]")
 			} else {
 				if item.ValueType == "Float32" {
 					decodeBytes, _ := base64.StdEncoding.DecodeString(item.Value)
@@ -138,10 +138,10 @@ func (f Conversion) CustomTransformToXML(edgexcontext *appcontext.Context, param
 			build.WriteString("}]")
 
 		}
-		build.WriteString(",\"device\":\"" + result.Device + "\",\"created\":\"" + strconv.FormatInt(result.Created, 10) + "\",\"origin\":\"" + strconv.FormatInt(result.Origin, 10) + "\",\"dtype\":\"" + dtype + "\"}")
+		build.WriteString(",\"device\":\"" + result.Device + "\",\"created\":\"" + strconv.FormatInt(result.Created, 10) + "\",\"origin\":\"" + strconv.FormatInt(result.Origin, 10) + "\",\"dtype\":\"" + dtype + "\"}]")
 
 		edgexcontext.ResponseContentType = clients.ContentTypeJSON
-		fmt.Println("111")
+		fmt.Println(build.String())
 		return true, build.String()
 	}
 	return false, errors.New("Unexpected type received")
