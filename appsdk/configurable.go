@@ -143,13 +143,13 @@ func (dynamic AppFunctionsSDKConfigurable) TransformToXML() appcontext.AppFuncti
 	return transform.TransformToXML
 }
 
-// CustomTransformToXML transforms an EdgeX event to XML.
+// CustomTransformToJson transforms an EdgeX event to XML.
 // It will return an error and stop the pipeline if a non-edgex
 // event is received or if no data is recieved.
 // This function is a configuration function and returns a function pointer.
-func (dynamic AppFunctionsSDKConfigurable) CustomTransformToXML() appcontext.AppFunction {
+func (dynamic AppFunctionsSDKConfigurable) CustomTransformToJson() appcontext.AppFunction {
 	transform := transforms.Conversion{}
-	return transform.CustomTransformToXML
+	return transform.CustomTransformToJson
 }
 
 // TransformToJSON transforms an EdgeX event to JSON.
