@@ -113,9 +113,9 @@ func (f Conversion) CustomTransformToJson(edgexcontext *appcontext.Context, para
 					} else {
 						return false, errors.New("Unexpected type received")
 					}
-					// if k < 15 {
+
 					build.WriteString(",")
-					// }
+
 				}
 				build.WriteString("\"value\":\"" + item.Value + "\"}]")
 			} else {
@@ -138,6 +138,7 @@ func (f Conversion) CustomTransformToJson(edgexcontext *appcontext.Context, para
 			build.WriteString("}]")
 
 		}
+
 		build.WriteString(",\"device\":\"" + result.Device + "\",\"created\":\"" + strconv.FormatInt(result.Created, 10) + "\",\"origin\":\"" + strconv.FormatInt(result.Origin, 10) + "\",\"dtype\":\"" + dtype + "\"}]")
 
 		edgexcontext.ResponseContentType = clients.ContentTypeJSON
