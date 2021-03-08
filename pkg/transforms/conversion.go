@@ -100,7 +100,7 @@ func (f Conversion) CustomTransformToJson(edgexcontext *appcontext.Context, para
 		flagmap := CreateShiftFlagMap(shiftflag)
 		for i, item := range readings {
 
-			// if item.Name == "w1"  ... item.Name =111= "p2"
+			// if item.Name == "w1"  ... item.Name == "p2"
 			if _, ok := flagmap[item.Name]; ok {
 				build.WriteString("\"" + item.Name + "\":[{")
 				dtype = "bit"
