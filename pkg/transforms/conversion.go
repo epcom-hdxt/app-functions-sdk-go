@@ -90,6 +90,35 @@ func (f Conversion) CustomTransformToJson(edgexcontext *appcontext.Context, para
 	if result, ok := params[0].(models.Event); ok {
 		readings := result.Readings
 
+		for i, item := range readings {
+			if item.ValueType == "Float32" {
+				decodeBytes, _ := base64.StdEncoding.DecodeString(item.Value)
+				// fmt.Println(FloatToString(ByteToFloat32(decodeBytes)))
+				readings[i].Value = FloatToString(ByteToFloat32(decodeBytes))
+			}
+		}
+		b, err := json.Marshal(result)
+		if err != nil {
+			// LoggingClient.Error(fmt.Sprintf("Error parsing JSON. Error: %s", err.Error()))
+			return false, errors.New("Error marshalling JSON")
+		}
+		edgexcontext.ResponseContentType = clients.ContentTypeJSON
+
+		return true, string(b)
+	}
+	return false, errors.New("Unexpected type received")
+}
+
+// TransformToJSON transforms an EdgeX event to JSON.
+// It will return an error and stop the pipeline if a non-edgex event is received or if no data is received.
+func (f Conversion) CustomTransformKeyValueToJson(edgexcontext *appcontext.Context, params ...interface{}) (continuePipeline bool, stringType interface{}) {
+	if len(params) < 1 {
+		return false, errors.New("No Event Received")
+	}
+	edgexcontext.LoggingClient.Debug("Transforming to JSON")
+	if result, ok := params[0].(models.Event); ok {
+		readings := result.Readings
+
 		var build strings.Builder
 		build.WriteString("[{\"data\":[{")
 		var dtype = "value"
